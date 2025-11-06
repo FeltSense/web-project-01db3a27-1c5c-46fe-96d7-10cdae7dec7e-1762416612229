@@ -1,0 +1,89 @@
+{
+  "componentsToGenerate": [
+    "Navigation",
+    "Hero",
+    "ServicesOverview",
+    "FeaturedProjects",
+    "Testimonials",
+    "TechStack",
+    "CTASection",
+    "Footer",
+    "AboutHero",
+    "TeamGrid",
+    "CompanyValues",
+    "ServicesGrid",
+    "ServiceDetail",
+    "ProcessTimeline",
+    "PortfolioGrid",
+    "CaseStudyCard",
+    "ContactForm"
+  ],
+  "estimatedChallenges": [
+    {
+      "component": "Navigation",
+      "challenge": "Multi-page navigation with active state and mobile menu",
+      "mitigation": "Use Next.js Link component with pathname detection for active states. Implement hamburger menu with state management for mobile."
+    },
+    {
+      "component": "Hero",
+      "challenge": "Creating engaging AI-themed animations without performance issues",
+      "mitigation": "Use CSS animations and transforms rather than JavaScript. Keep animations subtle and GPU-accelerated."
+    },
+    {
+      "component": "ServicesOverview",
+      "challenge": "Displaying multiple services clearly with links to detailed service page",
+      "mitigation": "Use card grid layout with hover effects. Each card links to services page with anchor or full service details."
+    },
+    {
+      "component": "FeaturedProjects",
+      "challenge": "Showcasing projects attractively with links to full case studies",
+      "mitigation": "Use image-heavy cards with overlay text. Link to portfolio page with project filtering or detail view."
+    },
+    {
+      "component": "TeamGrid",
+      "challenge": "Displaying team members with photos and bios in organized layout",
+      "mitigation": "Use responsive grid with consistent card sizes. Include modal or expandable sections for full bios."
+    },
+    {
+      "component": "PortfolioGrid",
+      "challenge": "Filtering and displaying projects dynamically",
+      "mitigation": "Implement client-side filtering with useState. Use filter buttons that update displayed projects array."
+    },
+    {
+      "component": "CaseStudyCard",
+      "challenge": "Presenting complex project information in digestible format",
+      "mitigation": "Use structured layout: problem, solution, results with metrics. Include visual elements and client quotes."
+    },
+    {
+      "component": "ContactForm",
+      "challenge": "Multi-step form with validation and user-friendly experience",
+      "mitigation": "Use controlled components with useState for form data. Implement step-by-step progression with validation at each stage."
+    },
+    {
+      "component": "ProcessTimeline",
+      "challenge": "Visualizing agency process in engaging way",
+      "mitigation": "Use vertical timeline with icons and descriptions. Make it responsive with horizontal scroll on mobile if needed."
+    },
+    {
+      "component": "TechStack",
+      "challenge": "Displaying numerous technologies without overwhelming users",
+      "mitigation": "Group by category (AI/ML, Frontend, Backend, Cloud). Use icon grid with tooltips for details."
+    }
+  ],
+  "fixerContext": {
+    "expectedStructure": "Simple Next.js app. Components in components/ folder at root. app/page.tsx imports from ../components/",
+    "importPaths": "Use '../components/ComponentName' from app/page.tsx",
+    "commonIssues": [
+      "Import path mismatches - ensure all imports use '../components/' from app/page.tsx",
+      "Missing 'use client' directive for interactive components (Navigation menu, ContactForm, PortfolioGrid filter)",
+      "Image optimization - use Next.js Image component with proper width/height",
+      "Link components - use next/link for internal navigation between pages",
+      "Responsive design - ensure grid layouts work on mobile with proper breakpoints",
+      "Color consistency - verify all pages use the same color variables/classes",
+      "Navigation active states - implement pathname checking for current page highlighting",
+      "Form validation - ensure ContactForm has proper error handling and validation",
+      "Component reusability - Header and Footer should be identical across all pages",
+      "Content relationships - ensure home page previews link to full content on other pages"
+    ]
+  }
+}
